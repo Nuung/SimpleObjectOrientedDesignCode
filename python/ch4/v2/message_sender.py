@@ -3,8 +3,6 @@ Message Sender v2 - Python conversion from Java
 Enhanced version with email sending capabilities
 """
 
-from typing import List
-
 from python.ch4.v1.message_sender import (
     Bot,
     UserDirectory,

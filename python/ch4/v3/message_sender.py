@@ -3,9 +3,7 @@ Message Sender v3 - Python conversion from Java
 Refactored version using MessageBot for sending messages
 """
 
-from typing import List
-
-from python.ch4.v1.message_sender import MessageRepository, Message
+from python.ch4.v1.message_sender import MessageRepository
 from python.ch4.v2.message_sender import EmailSender, UserPreferences
 from python.ch4.v3.message_bot import MessageBot
 

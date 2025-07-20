@@ -9,7 +9,11 @@ from python.ch4.v1.message_sender import Bot, UserDirectory, Message
 class MessageBot:
     """Handles sending messages through a bot interface"""
 
-    def __init__(self, bot: Bot, user_directory: UserDirectory):  # 1
+    def __init__(
+        self,
+        bot: Bot,
+        user_directory: UserDirectory,
+    ):
         self._bot = bot
         self._user_directory = user_directory
 

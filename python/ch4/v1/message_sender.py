@@ -58,7 +58,10 @@ class MessageSender:
     """Service for sending messages"""
 
     def __init__(
-        self, bot: Bot, user_directory: UserDirectory, repository: MessageRepository
+        self,
+        bot: Bot,
+        user_directory: UserDirectory,
+        repository: MessageRepository,
     ):
         self._bot = bot
         self._user_directory = user_directory
@@ -68,10 +71,9 @@ class MessageSender:
         """Send all messages that need to be sent"""
         messages_to_be_sent = self._repository.get_messages_to_be_sent()
         for message_to_be_sent in messages_to_be_sent:  # 1
-            user_id = self._user_directory.get_account(
-                message_to_be_sent.email
-            )  # 2
+            user_id = self._user_directory.get_account(message_to_be_sent.email)  # 2
             self._bot.send_private_message(
-                user_id, message_to_be_sent.body_in_markdown
+                user_id,
+                message_to_be_sent.body_in_markdown,
             )  # 3
             message_to_be_sent.mark_as_sent()  # 4
